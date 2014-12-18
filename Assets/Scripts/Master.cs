@@ -21,4 +21,10 @@ public class Master : MonoBehaviour {
             Application.Quit();
         }
 	}
+
+    public void OnEnable()
+    {
+        Manager.say("Going to the next level!", "Eliot");
+        Application.LoadLevel(Application.loadedLevel + 1);
+    }
 }

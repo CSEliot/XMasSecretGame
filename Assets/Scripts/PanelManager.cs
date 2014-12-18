@@ -17,6 +17,7 @@ public class PanelManager : MonoBehaviour {
 
 	public void OnEnable()
 	{
+        Debug.Log("ppoopop");
 		m_OpenParameterId = Animator.StringToHash (k_OpenTransitionName);
 
 		if (initiallyOpen == null)
