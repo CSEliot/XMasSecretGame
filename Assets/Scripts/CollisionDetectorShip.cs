@@ -27,5 +27,11 @@ public class CollisionDetectorShip : MonoBehaviour {
             finalTime = GameObject.Find("Canvas").GetComponentInChildren<IncreaseTimeCount>().Stop();
             Manager.say("Name touching ship is: " + floor.gameObject.name, "Eliot");
         }
+
+        if (floor.gameObject.layer == 8 && rigidbody.velocity.magnitude > 1)
+        {   
+            GameObject.Find("unitychan").gameObject.GetComponent<Animator>().enabled = false;
+            GameObject.Find("unitychan").gameObject.GetComponent<Rigidbody>().isKinematic = false;
+        }
     }
 }

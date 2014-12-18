@@ -2,7 +2,7 @@
 using System.Collections;
 
 [RequireComponent(typeof(AudioSource))]
-public class CollisionDetector : MonoBehaviour {
+public class CollisionDetectorGiftBox : MonoBehaviour {
 
     public AudioClip tapSound;
     public AudioClip breakSound;
@@ -26,6 +26,12 @@ public class CollisionDetector : MonoBehaviour {
         else
         {
             audio.PlayOneShot(tapSound);
+        }
+
+        if (floor.gameObject.layer == 8 && rigidbody.velocity.magnitude > 1)
+        {
+            GameObject.Find("unitychan").gameObject.GetComponent<Animator>().enabled = false;
+            GameObject.Find("unitychan").gameObject.GetComponent<Rigidbody>().isKinematic = false;
         }
     }
 }

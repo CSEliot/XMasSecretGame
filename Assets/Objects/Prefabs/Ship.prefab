@@ -1192,6 +1192,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   body: {fileID: 5416766}
   forceAmount: 280
+  megaBoostAmount: 50
+  megaBoostMat: {fileID: 2100000, guid: e225e2a93a24ea945926d0e4399a0e7f, type: 2}
+  normalBoostMat: {fileID: 2100000, guid: 04d42b81c57398e448fbb52a2a560dbf, type: 2}
 --- !u!114 &11416754
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1216,6 +1219,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   body: {fileID: 5416766}
   forceAmount: 280
+  megaBoostAmount: 50
+  megaBoostMat: {fileID: 2100000, guid: e225e2a93a24ea945926d0e4399a0e7f, type: 2}
+  normalBoostMat: {fileID: 2100000, guid: 04d42b81c57398e448fbb52a2a560dbf, type: 2}
 --- !u!114 &11416758
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1240,6 +1246,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   body: {fileID: 5416766}
   forceAmount: 280
+  megaBoostAmount: 50
+  megaBoostMat: {fileID: 2100000, guid: e225e2a93a24ea945926d0e4399a0e7f, type: 2}
+  normalBoostMat: {fileID: 2100000, guid: 04d42b81c57398e448fbb52a2a560dbf, type: 2}
 --- !u!114 &11416762
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1287,6 +1296,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   body: {fileID: 5416766}
   forceAmount: 280
+  megaBoostAmount: 50
+  megaBoostMat: {fileID: 2100000, guid: e225e2a93a24ea945926d0e4399a0e7f, type: 2}
+  normalBoostMat: {fileID: 2100000, guid: 04d42b81c57398e448fbb52a2a560dbf, type: 2}
 --- !u!124 &12416768
 Behaviour:
   m_ObjectHideFlags: 1
