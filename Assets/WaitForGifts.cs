@@ -1,38 +1,36 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class WaitForGifts : MonoBehaviour {
 
     public GameObject giftsText;
-    private bool gottenAGift = false;
-    private float finalTime;
 
 	// Use this for initialization
 	void Start () {
-	
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+        
 	}
 
     void OnTriggerEnter(Collider thing)
     {
-        Manager.say("IN DELIVERY SPACE: " + thing.name, "Eliot");
-        if (!gottenAGift) { finalTime = Time.timeSinceLevelLoad; gottenAGift = true; }
         if (thing.gameObject.layer == 10)
         {
+            Manager.say("IN DELIVERY SPACE: " + thing.name, "Eliot");
+            GameObject.Find("FINAL SCORE").GetComponent<Text>().enabled = true;
+            GameObject.Find("NextLevel").transform.GetChild(0).gameObject.SetActive(true);
             giftsText.GetComponent<GiftTextControl>().AddGiftCount();
         }
     }
 
     void OnTriggerExit(Collider thing)
     {
-        Manager.say("OUT DELIVERY SPACE: " + thing.name, "Eliot");
-
         if (thing.gameObject.layer == 10)
         {
+            Manager.say("OUT DELIVERY SPACE: " + thing.name, "Eliot");
             giftsText.GetComponent<GiftTextControl>().SubtractGiftCount();
         }
     }

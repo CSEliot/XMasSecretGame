@@ -19,9 +19,10 @@ public class CollisionDetectorGiftBox : MonoBehaviour {
 
     void OnCollisionEnter(Collision floor)
     {
-        if (floor.gameObject.name == "floor")
+        if (floor.gameObject.name == "floor" || floor.gameObject.name == "Platform Start")
         {
             audio.PlayOneShot(breakSound);
+            GameObject.Find("unitychan").GetComponent<Animator>().SetBool("HasFailed", true);
         }
         else
         {

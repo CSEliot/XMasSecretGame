@@ -32,7 +32,7 @@ public class DELIVERYSCRIPT : MonoBehaviour {
             }
         }
 
-        if (Time.timeSinceLevelLoad > 5)
+        if (Time.timeSinceLevelLoad > 3.6)
         {
             transform.GetChild(2).gameObject.SetActive(false);
             transform.GetChild(3).gameObject.SetActive(false);

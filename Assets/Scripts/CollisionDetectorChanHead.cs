@@ -25,8 +25,12 @@ public class CollisionDetectorChanHead : MonoBehaviour {
             //ship contact noise!
             if (gameObject.rigidbody.velocity.magnitude > 1 || floor.gameObject.rigidbody.velocity.magnitude > 1)
             {
-                audio.PlayOneShot(breakSound);
-                audio.PlayOneShot(shipHitSound);
+                if (!audio.isPlaying)
+                {
+                    if (gameObject.name == "Character1_Neck") { audio.PlayOneShot(breakSound); }
+                    audio.PlayOneShot(shipHitSound);
+                }
+
             }
         }
         if (floor.gameObject.layer == 10)
@@ -34,8 +38,11 @@ public class CollisionDetectorChanHead : MonoBehaviour {
             //gift contact noise!
             if (gameObject.rigidbody.velocity.magnitude > 1 || floor.gameObject.rigidbody.velocity.magnitude > 1)
             {
-                audio.PlayOneShot(breakSound);
-                audio.PlayOneShot(giftHitSound);
+                if (!audio.isPlaying)
+                {
+                    if (gameObject.name == "Character1_Neck") { audio.PlayOneShot(breakSound); }
+                    audio.PlayOneShot(giftHitSound);
+                }
             }
         }
 

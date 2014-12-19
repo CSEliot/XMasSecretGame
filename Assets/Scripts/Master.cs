@@ -24,7 +24,14 @@ public class Master : MonoBehaviour {
 
     public void OnEnable()
     {
-        Manager.say("Going to the next level!", "Eliot");
-        Application.LoadLevel(Application.loadedLevel + 1);
+        if (GameObject.Find("Scoretext").gameObject.GetComponent<GiftTextControl>().getHighScore() > 0f)
+        {
+            Manager.say("Going to the next level!", "Eliot");
+            if (Input.GetButtonDown("Submit"))
+            {
+                Application.LoadLevel(Application.loadedLevel + 1);
+            }
+
+        }
     }
 }
