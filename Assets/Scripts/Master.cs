@@ -3,9 +3,11 @@ using System.Collections;
 
 public class Master : MonoBehaviour {
 
+    private bool is2P;
+
 	// Use this for initialization
 	void Start () {
-	
+        DontDestroyOnLoad(gameObject);
 	}
 	
 	// Update is called once per frame
@@ -15,6 +17,11 @@ public class Master : MonoBehaviour {
             Application.LoadLevel(Application.loadedLevel);
         }
 
+        if (Input.GetButtonDown("NextLevel"))
+        {
+            Application.LoadLevel(Application.loadedLevel+1);
+        }
+
         if (Input.GetButtonDown("Quit"))
         {
             Manager.say("Quitting!", "Eliot");
@@ -22,16 +29,14 @@ public class Master : MonoBehaviour {
         }
 	}
 
-    public void OnEnable()
+    public void set2P(bool isIt2P)
     {
-        if (GameObject.Find("Scoretext").gameObject.GetComponent<GiftTextControl>().getHighScore() > 0f)
-        {
-            Manager.say("Going to the next level!", "Eliot");
-            if (Input.GetButtonDown("Submit"))
-            {
-                Application.LoadLevel(Application.loadedLevel + 1);
-            }
+        is2P = isIt2P;
+        Application.LoadLevel(Application.loadedLevel+1);
+    }
 
-        }
+    public bool getIs2P()
+    {
+        return is2P;
     }
 }

@@ -11,24 +11,53 @@ public class TurnControl : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        if (gameObject.name == "Turner1")
+        if (GameObject.Find("GameMaster") != null && GameObject.Find("GameMaster").GetComponent<Master>().getIs2P())
         {
-            turnStringX = turnStringX + "1";
-            turnStringZ = turnStringZ + "1";
+            Manager.say("2P selected, constructiing Makeforce", "Eliot");
+            if (gameObject.name == "Turner1")
+            {
+                turnStringX = turnStringX + "1";
+                turnStringZ = turnStringZ + "1";
+            }
+            else if (gameObject.name == "Turner2")
+            {
+                turnStringX = turnStringX + "1";
+                turnStringZ = turnStringZ + "1";
+            }
+            else if (gameObject.name == "Turner3")
+            {
+                turnStringX = turnStringX + "2";
+                turnStringZ = turnStringZ + "2";
+            }
+            else if (gameObject.name == "Turner4")
+            {
+                turnStringX = turnStringX + "2";
+                turnStringZ = turnStringZ + "2";
+            }
         }
-        else if (gameObject.name == "Turner2")
+        else
         {
-            turnStringX = turnStringX + "2";
-            turnStringZ = turnStringZ + "2";
-        } else if (gameObject.name == "Turner3")
-        {
-            turnStringX = turnStringX + "3";
-            turnStringZ = turnStringZ + "3";
-        }
-        else if (gameObject.name == "Turner4")
-        {
-            turnStringX = turnStringX + "4";
-            turnStringZ = turnStringZ + "4";
+            Manager.say("4P selected, constructiing Makeforce", "Eliot");
+            if (gameObject.name == "Turner1")
+            {
+                turnStringX = turnStringX + "1";
+                turnStringZ = turnStringZ + "1";
+            }
+            else if (gameObject.name == "Turner2")
+            {
+                turnStringX = turnStringX + "2";
+                turnStringZ = turnStringZ + "2";
+            }
+            else if (gameObject.name == "Turner3")
+            {
+                turnStringX = turnStringX + "3";
+                turnStringZ = turnStringZ + "3";
+            }
+            else if (gameObject.name == "Turner4")
+            {
+                turnStringX = turnStringX + "4";
+                turnStringZ = turnStringZ + "4";
+            }
         }
 	}
 	

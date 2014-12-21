@@ -16,25 +16,53 @@ public class MakeForce : MonoBehaviour {
     public Material normalBoostMat;
 	// Use this for initialization
 	void Start () {
-        if (gameObject.name == "Rocket1")
+        if (GameObject.Find("GameMaster") != null && GameObject.Find("GameMaster").GetComponent<Master>().getIs2P())
         {
-            boosterName = "Booster1";
-            megaBoostName = "MegaBoost1";
+            Manager.say("2P selected, constructiing Makeforce", "Eliot");
+            if (gameObject.name == "Rocket1")
+            {
+                boosterName = "Booster1";
+                megaBoostName = "MegaBoost1";
+            }
+            else if (gameObject.name == "Rocket2")
+            {
+                boosterName = "Booster1";
+                megaBoostName = "MegaBoost1";
+            }
+            else if (gameObject.name == "Rocket3")
+            {
+                boosterName = "Booster2";
+                megaBoostName = "MegaBoost2";
+            }
+            else if (gameObject.name == "Rocket4")
+            {
+                boosterName = "Booster2";
+                megaBoostName = "MegaBoost2";
+            }
         }
-        else if (gameObject.name == "Rocket2")
+        else
         {
-            boosterName = "Booster2";
-            megaBoostName = "MegaBoost2";
-        }
-        else if (gameObject.name == "Rocket3")
-        {
-            boosterName = "Booster3";
-            megaBoostName = "MegaBoost3";
-        }
-        else if (gameObject.name == "Rocket4")
-        {
-            boosterName = "Booster4";
-            megaBoostName = "MegaBoost4";
+            Manager.say("4P selected, constructiing Makeforce", "Eliot");
+            if (gameObject.name == "Rocket1")
+            {
+                boosterName = "Booster1";
+                megaBoostName = "MegaBoost1";
+            }
+            else if (gameObject.name == "Rocket2")
+            {
+                boosterName = "Booster2";
+                megaBoostName = "MegaBoost2";
+            }
+            else if (gameObject.name == "Rocket3")
+            {
+                boosterName = "Booster3";
+                megaBoostName = "MegaBoost3";
+            }
+            else if (gameObject.name == "Rocket4")
+            {
+                boosterName = "Booster4";
+                megaBoostName = "MegaBoost4";
+            }
         }
         newForceAmount = forceAmount;
 	}
@@ -57,6 +85,7 @@ public class MakeForce : MonoBehaviour {
         }
 
 		if (Input.GetAxis ("BoostOn") > 0 || Input.GetAxis(boosterName) > 0) {
+            Manager.say("Boosting by: " + boosterName, "Eliot");
             float inputAmount = Mathf.Clamp(Input.GetAxis(boosterName), 0f, 1f);
             transform.GetChild(0).GetChild(0).GetComponent<Light>().intensity = 3.5f*(inputAmount+Input.GetAxis ("BoostOn"));
             float spaceInputAmount = Input.GetAxis ("BoostOn");

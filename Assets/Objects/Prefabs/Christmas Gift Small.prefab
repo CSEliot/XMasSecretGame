@@ -8,7 +8,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 458114}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,7 +25,7 @@ GameObject:
   - 4: {fileID: 458116}
   - 33: {fileID: 3358114}
   - 23: {fileID: 2358114}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   - 4: {fileID: 458118}
   - 33: {fileID: 3358116}
   - 23: {fileID: 2358116}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,7 +59,7 @@ GameObject:
   - 4: {fileID: 458120}
   - 33: {fileID: 3358118}
   - 23: {fileID: 2358118}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube_1_Extrude_NURBS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78,9 +78,9 @@ GameObject:
   - 65: {fileID: 6558114}
   - 82: {fileID: 8258114}
   - 114: {fileID: 11458114}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Christmas Gift Small
-  m_TagString: Untagged
+  m_TagString: Gift
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,7 +95,7 @@ GameObject:
   - 4: {fileID: 458124}
   - 33: {fileID: 3358120}
   - 23: {fileID: 2358120}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube_1_Extrude_NURBS_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

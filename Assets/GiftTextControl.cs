@@ -16,7 +16,7 @@ public class GiftTextControl : MonoBehaviour {
     private float finalTime = 0f;
 	// Use this for initialization
 	void Start () {
-        GiftString = "Presents delivered to Unity-Chan: ";
+        GiftString = gameObject.GetComponent<Text>().text;// "Presents delivered to Unity-Chan: ";
         presentsText = gameObject.GetComponent<Text>();
         oldTime = Time.timeSinceLevelLoad;
         totalGifts = GameObject.FindGameObjectsWithTag("Gift").Length;
