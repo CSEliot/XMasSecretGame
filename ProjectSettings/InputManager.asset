@@ -22,6 +22,22 @@ InputManager:
     axis: 0
     joyNum: 0
   - serializedVersion: 3
+    m_Name: Horizontal
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: 
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 3
+    dead: .00100000005
+    sensitivity: 3
+    snap: 1
+    invert: 0
+    type: 2
+    axis: 5
+    joyNum: 1
+  - serializedVersion: 3
     m_Name: Vertical
     descriptiveName: 
     descriptiveNegativeName: 
@@ -38,11 +54,27 @@ InputManager:
     axis: 0
     joyNum: 0
   - serializedVersion: 3
+    m_Name: Vertical
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: 
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 3
+    dead: .00100000005
+    sensitivity: 3
+    snap: 1
+    invert: 0
+    type: 2
+    axis: 6
+    joyNum: 1
+  - serializedVersion: 3
     m_Name: BoostOn
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: space
+    positiveButton: p
     altNegativeButton: 
     altPositiveButton: 
     gravity: 1000
@@ -54,6 +86,22 @@ InputManager:
     axis: 0
     joyNum: 0
   - serializedVersion: 3
+    m_Name: BoostOnSP
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: space
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 0
+    dead: .00999999978
+    sensitivity: 1
+    snap: 0
+    invert: 1
+    type: 2
+    axis: 1
+    joyNum: 1
+  - serializedVersion: 3
     m_Name: Horizontal1
     descriptiveName: 
     descriptiveNegativeName: 
@@ -61,9 +109,9 @@ InputManager:
     positiveButton: 
     altNegativeButton: 
     altPositiveButton: 
-    gravity: 0
-    dead: .100000001
-    sensitivity: 1
+    gravity: 20
+    dead: .00100000005
+    sensitivity: .99000001
     snap: 0
     invert: 0
     type: 2
@@ -78,8 +126,8 @@ InputManager:
     altNegativeButton: 
     altPositiveButton: 
     gravity: 0
-    dead: .100000001
-    sensitivity: 1
+    dead: .00100000005
+    sensitivity: .99000001
     snap: 0
     invert: 0
     type: 2
@@ -94,8 +142,8 @@ InputManager:
     altNegativeButton: 
     altPositiveButton: 
     gravity: 0
-    dead: .100000001
-    sensitivity: 1
+    dead: .00100000005
+    sensitivity: .99000001
     snap: 0
     invert: 0
     type: 2
@@ -110,8 +158,8 @@ InputManager:
     altNegativeButton: 
     altPositiveButton: 
     gravity: 0
-    dead: .100000001
-    sensitivity: 1
+    dead: .00100000005
+    sensitivity: .99000001
     snap: 0
     invert: 0
     type: 2
@@ -126,8 +174,8 @@ InputManager:
     altNegativeButton: 
     altPositiveButton: 
     gravity: 0
-    dead: .100000001
-    sensitivity: 1
+    dead: .00100000005
+    sensitivity: .99000001
     snap: 0
     invert: 1
     type: 2
@@ -142,8 +190,8 @@ InputManager:
     altNegativeButton: 
     altPositiveButton: 
     gravity: 0
-    dead: .100000001
-    sensitivity: 1
+    dead: .00100000005
+    sensitivity: .99000001
     snap: 0
     invert: 1
     type: 2
@@ -158,8 +206,8 @@ InputManager:
     altNegativeButton: 
     altPositiveButton: 
     gravity: 0
-    dead: .100000001
-    sensitivity: 1
+    dead: .00100000005
+    sensitivity: .99000001
     snap: 0
     invert: 1
     type: 2
@@ -174,8 +222,8 @@ InputManager:
     altNegativeButton: 
     altPositiveButton: 
     gravity: 0
-    dead: .100000001
-    sensitivity: 1
+    dead: .00100000005
+    sensitivity: .99000001
     snap: 0
     invert: 1
     type: 2
@@ -188,7 +236,7 @@ InputManager:
     negativeButton: 
     positiveButton: a
     altNegativeButton: 
-    altPositiveButton: joystick 1 button 1
+    altPositiveButton: joystick 1 button 4
     gravity: 1000
     dead: .00100000005
     sensitivity: 1000
@@ -206,8 +254,8 @@ InputManager:
     altNegativeButton: 
     altPositiveButton: 
     gravity: 0
-    dead: .100000001
-    sensitivity: 1
+    dead: .00100000005
+    sensitivity: .99000001
     snap: 0
     invert: 1
     type: 2
@@ -220,7 +268,7 @@ InputManager:
     negativeButton: 
     positiveButton: s
     altNegativeButton: 
-    altPositiveButton: 
+    altPositiveButton: joystick 1 button 4
     gravity: 1000
     dead: .00100000005
     sensitivity: 1000
@@ -238,8 +286,8 @@ InputManager:
     altNegativeButton: 
     altPositiveButton: 
     gravity: 0
-    dead: .100000001
-    sensitivity: 1
+    dead: .00100000005
+    sensitivity: .99000001
     snap: 0
     invert: 1
     type: 2
@@ -252,7 +300,7 @@ InputManager:
     negativeButton: 
     positiveButton: d
     altNegativeButton: 
-    altPositiveButton: 
+    altPositiveButton: joystick 1 button 5
     gravity: 1000
     dead: .00100000005
     sensitivity: 1000
@@ -270,8 +318,8 @@ InputManager:
     altNegativeButton: 
     altPositiveButton: 
     gravity: 0
-    dead: .100000001
-    sensitivity: 1
+    dead: .00100000005
+    sensitivity: .99000001
     snap: 0
     invert: 1
     type: 2
@@ -284,7 +332,7 @@ InputManager:
     negativeButton: 
     positiveButton: f
     altNegativeButton: 
-    altPositiveButton: 
+    altPositiveButton: joystick 1 button 5
     gravity: 1000
     dead: .00100000005
     sensitivity: 1000
@@ -302,8 +350,8 @@ InputManager:
     altNegativeButton: 
     altPositiveButton: 
     gravity: 0
-    dead: .100000001
-    sensitivity: 1
+    dead: .00100000005
+    sensitivity: .99000001
     snap: 0
     invert: 1
     type: 2
@@ -346,7 +394,7 @@ InputManager:
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: left shift
+    positiveButton: space
     altNegativeButton: 
     altPositiveButton: 
     gravity: 1000
@@ -439,16 +487,16 @@ InputManager:
     joyNum: 0
   - serializedVersion: 3
     m_Name: Submit
-    descriptiveName: 
+    descriptiveName: SUBMIT SHIT
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: mouse 1
+    positiveButton: return
     altNegativeButton: 
     altPositiveButton: joystick button 0
     gravity: 1000
     dead: .00100000005
     sensitivity: 1000
-    snap: 0
+    snap: 1
     invert: 0
     type: 0
     axis: 0

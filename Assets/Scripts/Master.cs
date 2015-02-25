@@ -3,15 +3,37 @@ using System.Collections;
 
 public class Master : MonoBehaviour {
 
-    private bool is2P;
+    private int PNum;
+    private int totalHighScore = 0;
 
 	// Use this for initialization
 	void Start () {
-        DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(transform.gameObject);
 	}
-	
+
+    void OnEnable()
+    {
+        Debug.Log("I have started!");
+        DontDestroyOnLoad(transform.gameObject);
+    }
+
 	// Update is called once per frame
-	void Update () {
+	void Update () {/*
+        if (Input.GetButtonDown("Submit"))
+        {
+            if (GameObject.Find("Scoretext") != null)
+            {
+                if (GameObject.Find("Scoretext").gameObject.GetComponent<GiftTextControl>().getHighScore() > 0f)
+                {
+                    if (GameObject.Find("GameMaster") != null)
+                    {
+                        int addScore = GameObject.Find("FINAL SCORE").GetComponent<getFinalScore>().getHighScore();
+                        GameObject.Find("GameMaster").GetComponent<Master>().addToHighScore(addScore);
+                    }
+                    Application.LoadLevel(Application.loadedLevel + 1);
+                }
+            }
+        }*/
         if (Input.GetButtonDown("Restart"))
         {
             Application.LoadLevel(Application.loadedLevel);
@@ -29,14 +51,24 @@ public class Master : MonoBehaviour {
         }
 	}
 
-    public void set2P(bool isIt2P)
+    public void setPNum(int givenPNum)
     {
-        is2P = isIt2P;
+        PNum = givenPNum;
         Application.LoadLevel(Application.loadedLevel+1);
     }
 
-    public bool getIs2P()
+    public int getPNum()
     {
-        return is2P;
+        return PNum;
+    }
+
+    public void addToHighScore(int pointsToAdd)
+    {
+        totalHighScore += pointsToAdd;
+    }
+
+    public int totalScoreSoFar()
+    {
+        return totalHighScore;
     }
 }

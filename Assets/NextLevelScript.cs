@@ -13,12 +13,16 @@ public class NextLevelScript : MonoBehaviour {
 	
 	}
 
-    public void OnEnable()
+    public void ToNextLevel()
     {
         if (GameObject.Find("Scoretext") != null)
         {
             if (GameObject.Find("Scoretext").gameObject.GetComponent<GiftTextControl>().getHighScore() > 0f)
             {
+                    if(GameObject.Find("GameMaster") != null){
+                        int addScore = GameObject.Find("FINAL SCORE").GetComponent<getFinalScore>().getHighScore();
+                        GameObject.Find("GameMaster").GetComponent<Master>().addToHighScore(addScore);
+                    }
                     Application.LoadLevel(Application.loadedLevel + 1);
             }
         }

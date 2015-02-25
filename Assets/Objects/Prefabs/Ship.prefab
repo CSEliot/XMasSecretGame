@@ -524,7 +524,7 @@ Transform:
   m_Children:
   - {fileID: 416768}
   m_Father: {fileID: 416764}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!4 &416748
 Transform:
   m_ObjectHideFlags: 1
@@ -629,7 +629,7 @@ Transform:
   m_Children:
   - {fileID: 416742}
   m_Father: {fileID: 416764}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!4 &416764
 Transform:
   m_ObjectHideFlags: 1
@@ -645,9 +645,9 @@ Transform:
   - {fileID: 416756}
   - {fileID: 416750}
   - {fileID: 416758}
+  - {fileID: 449726}
   - {fileID: 416746}
   - {fileID: 416762}
-  - {fileID: 449726}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &416766
@@ -733,11 +733,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 149726}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 9.69999981, z: 14.3999996}
+  m_LocalPosition: {x: -0, y: 2.5, z: 3.9000001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 416764}
-  m_RootOrder: 7
+  m_RootOrder: 5
 --- !u!4 &486780
 Transform:
   m_ObjectHideFlags: 1
@@ -1968,8 +1968,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   body: {fileID: 5416766}
-  forceAmount: 300
-  megaBoostAmount: 25
+  forceAmount: 200
+  megaBoostAmount: 15
   megaBoostMat: {fileID: 2100000, guid: e225e2a93a24ea945926d0e4399a0e7f, type: 2}
   normalBoostMat: {fileID: 2100000, guid: 04d42b81c57398e448fbb52a2a560dbf, type: 2}
 --- !u!114 &11416754
@@ -1995,8 +1995,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   body: {fileID: 5416766}
-  forceAmount: 300
-  megaBoostAmount: 25
+  forceAmount: 200
+  megaBoostAmount: 15
   megaBoostMat: {fileID: 2100000, guid: e225e2a93a24ea945926d0e4399a0e7f, type: 2}
   normalBoostMat: {fileID: 2100000, guid: 04d42b81c57398e448fbb52a2a560dbf, type: 2}
 --- !u!114 &11416758
@@ -2022,8 +2022,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   body: {fileID: 5416766}
-  forceAmount: 300
-  megaBoostAmount: 25
+  forceAmount: 200
+  megaBoostAmount: 15
   megaBoostMat: {fileID: 2100000, guid: e225e2a93a24ea945926d0e4399a0e7f, type: 2}
   normalBoostMat: {fileID: 2100000, guid: 04d42b81c57398e448fbb52a2a560dbf, type: 2}
 --- !u!114 &11416762
@@ -2072,8 +2072,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   body: {fileID: 5416766}
-  forceAmount: 300
-  megaBoostAmount: 25
+  forceAmount: 200
+  megaBoostAmount: 15
   megaBoostMat: {fileID: 2100000, guid: e225e2a93a24ea945926d0e4399a0e7f, type: 2}
   normalBoostMat: {fileID: 2100000, guid: 04d42b81c57398e448fbb52a2a560dbf, type: 2}
 --- !u!124 &12416768

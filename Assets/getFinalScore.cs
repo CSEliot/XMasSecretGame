@@ -7,7 +7,7 @@ public class getFinalScore : MonoBehaviour {
     public GameObject textController;
     private Text finalText;
     private string strText = "FINAL SCORE\n";
-    int highscore;
+    private int highscore;
 	// Use this for initialization
 	void Start () {
         finalText = gameObject.GetComponent<Text>();
@@ -17,7 +17,13 @@ public class getFinalScore : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         highscore = textController.GetComponent<GiftTextControl>().getHighScore();
-        Manager.say("Highschore: " + highscore, "Eliot");
-        finalText.text = strText + highscore;
+        Manager.say("Highschore: " + highscore, "Eliot2");
+        int totalHighScore = GameObject.Find("GameMaster") != null ? GameObject.Find("GameMaster").GetComponent<Master>().totalScoreSoFar() : 0;
+        finalText.text = strText + highscore + "\n TOTAL IS: " + (totalHighScore+highscore);
 	}
+
+    public int getHighScore()
+    {
+        return highscore;
+    }
 }
