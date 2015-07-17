@@ -119,8 +119,8 @@ public class MakeForce : MonoBehaviour {
             float spaceInputAmount = Mathf.Clamp(Input.GetAxis(boostON), 0f, 1f);
             body.AddForceAtPosition(transform.forward * -newForceAmount * (spaceInputAmount), transform.position, ForceMode.Force);
 			transform.GetChild (0).gameObject.SetActive (true);
-            if (audio.isPlaying == false) { audio.Play(); } 
-            audio.volume = (spaceInputAmount);
+            if (GetComponent<AudioSource>().isPlaying == false) { GetComponent<AudioSource>().Play(); } 
+            GetComponent<AudioSource>().volume = (spaceInputAmount);
             Manager.say("Math equation is: " +(Mathf.Log(newForceAmount*newForceAmount*newForceAmount) / 20f -0.8f), "Eliot2");
             transform.GetChild(0).transform.localScale = new Vector3(0.7f, 0.5f * (spaceInputAmount + (Mathf.Log(newForceAmount * newForceAmount * newForceAmount) / 20f - 0.8f)), .776f);
         } else if (Input.GetAxis(boosterName) > 0){
@@ -130,14 +130,14 @@ public class MakeForce : MonoBehaviour {
             Manager.say("Input amount is: " + Input.GetAxis(boosterName) + " clamped: " + inputAmount, "Eliot");
             body.AddForceAtPosition(transform.forward * -newForceAmount * (inputAmount), transform.position, ForceMode.Force);
             transform.GetChild(0).gameObject.SetActive(true);
-            if (audio.isPlaying == false) { audio.Play(); }
-            audio.volume = (inputAmount);
+            if (GetComponent<AudioSource>().isPlaying == false) { GetComponent<AudioSource>().Play(); }
+            GetComponent<AudioSource>().volume = (inputAmount);
             Manager.say("Math equation is: " + (Mathf.Log(newForceAmount * newForceAmount * newForceAmount) / 20f - 0.8f), "Eliot2");
             transform.GetChild(0).transform.localScale = new Vector3(0.7f, 0.5f * (inputAmount + (Mathf.Log(newForceAmount * newForceAmount * newForceAmount) / 20f - 0.8f)), .776f);
 
         }else {
 			transform.GetChild (0).gameObject.SetActive (false);
-            audio.Stop();
+            GetComponent<AudioSource>().Stop();
 		}
 
         

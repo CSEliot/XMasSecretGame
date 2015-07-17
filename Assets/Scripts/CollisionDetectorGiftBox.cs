@@ -21,15 +21,15 @@ public class CollisionDetectorGiftBox : MonoBehaviour {
     {
         if (floor.gameObject.name == "floor" || floor.gameObject.name == "Platform Start")
         {
-            audio.PlayOneShot(breakSound);
+            GetComponent<AudioSource>().PlayOneShot(breakSound);
             GameObject.Find("unitychan").GetComponent<Animator>().SetBool("HasFailed", true);
         }
         else
         {
-            audio.PlayOneShot(tapSound);
+            GetComponent<AudioSource>().PlayOneShot(tapSound);
         }
 
-        if (floor.gameObject.layer == 8 && rigidbody.velocity.magnitude > 1)
+        if (floor.gameObject.layer == 8 && GetComponent<Rigidbody>().velocity.magnitude > 1)
         {
             GameObject.Find("unitychan").gameObject.GetComponent<Animator>().enabled = false;
             GameObject.Find("unitychan").gameObject.GetComponent<Rigidbody>().isKinematic = false;

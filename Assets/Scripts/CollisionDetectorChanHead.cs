@@ -23,12 +23,12 @@ public class CollisionDetectorChanHead : MonoBehaviour {
         if (floor.gameObject.layer != 8 && floor.gameObject.layer == 9)
         {   
             //ship contact noise!
-            if (gameObject.rigidbody.velocity.magnitude > 1 || floor.gameObject.rigidbody.velocity.magnitude > 1)
+            if (gameObject.GetComponent<Rigidbody>().velocity.magnitude > 1 || floor.gameObject.GetComponent<Rigidbody>().velocity.magnitude > 1)
             {
-                if (!audio.isPlaying)
+                if (!GetComponent<AudioSource>().isPlaying)
                 {
-                    if (gameObject.name == "Character1_Neck") { audio.PlayOneShot(breakSound); }
-                    audio.PlayOneShot(shipHitSound);
+                    if (gameObject.name == "Character1_Neck") { GetComponent<AudioSource>().PlayOneShot(breakSound); }
+                    GetComponent<AudioSource>().PlayOneShot(shipHitSound);
                 }
 
             }
@@ -36,12 +36,12 @@ public class CollisionDetectorChanHead : MonoBehaviour {
         if (floor.gameObject.layer == 10)
         {
             //gift contact noise!
-            if (gameObject.rigidbody.velocity.magnitude > 1 || floor.gameObject.rigidbody.velocity.magnitude > 1)
+            if (gameObject.GetComponent<Rigidbody>().velocity.magnitude > 1 || floor.gameObject.GetComponent<Rigidbody>().velocity.magnitude > 1)
             {
-                if (!audio.isPlaying)
+                if (!GetComponent<AudioSource>().isPlaying)
                 {
-                    if (gameObject.name == "Character1_Neck") { audio.PlayOneShot(breakSound); }
-                    audio.PlayOneShot(giftHitSound);
+                    if (gameObject.name == "Character1_Neck") { GetComponent<AudioSource>().PlayOneShot(breakSound); }
+                    GetComponent<AudioSource>().PlayOneShot(giftHitSound);
                 }
             }
         }

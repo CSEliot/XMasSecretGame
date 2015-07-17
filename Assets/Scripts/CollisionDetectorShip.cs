@@ -20,7 +20,7 @@ public class CollisionDetectorShip : MonoBehaviour {
     {
         if (floor.gameObject.name != "Christmas Gift")
         {
-            audio.PlayOneShot(tapSound);
+            GetComponent<AudioSource>().PlayOneShot(tapSound);
         }
         if (floor.gameObject.name == "Platform Finish")
         {
@@ -28,7 +28,7 @@ public class CollisionDetectorShip : MonoBehaviour {
             Manager.say("Name touching ship is: " + floor.gameObject.name, "Eliot");
         }
 
-        if (floor.gameObject.layer == 8 && rigidbody.velocity.magnitude > 1)
+        if (floor.gameObject.layer == 8 && GetComponent<Rigidbody>().velocity.magnitude > 1)
         {   
             GameObject.Find("unitychan").gameObject.GetComponent<Animator>().enabled = false;
             GameObject.Find("unitychan").gameObject.GetComponent<Rigidbody>().isKinematic = false;
