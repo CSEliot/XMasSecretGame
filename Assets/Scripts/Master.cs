@@ -49,6 +49,11 @@ public class Master : MonoBehaviour {
             Manager.say("Quitting!", "Eliot");
             Application.Quit();
         }
+		if (Input.GetButtonDown("ReturnMenu"))
+		{
+			Manager.say("Quitting!", "Eliot");
+			Application.LoadLevel(0);
+		}
 	}
 
     public void setPNum(int givenPNum)
