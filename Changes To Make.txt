@@ -1,0 +1,5 @@
+Remove Physical gifts entirely
+Remove Gravity
+Fix Level 1 not doing "to next level"
+Unity-Chan is louder
+	- Find Purchaseable cute girl model
